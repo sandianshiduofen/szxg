@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link type="image/x-icon" href="favicon.ico" rel="icon">
+	<title>三真经销商修理厂App下载</title>
+	<link id="link" rel="stylesheet" href="./css/style.css">
+	<script type="text/javascript">
+		document.getElementById('link').href = './css/style.css?ver='+parseInt(Math.random()*100000);
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="content">
+			<div class="logo"><img src="images/logo.png" height="52" width="312" alt="三真驿道"></div>
+			<div class="tel"><img src="images/tel.png" height="16" width="185" alt=""></div>
+		</div>
+	</div>
+	<div class="con1">
+		<div class="content">
+			<div class="con1_l">
+				<div class="app_t"><img src="images/text1.png" alt=""></div>
+				<div class="app_b">
+					<div class="app_b_l">
+						<div class="app_b_hua">
+							<ol>
+								<li class="cur"><img class="erwei" src="images/xlc.png" alt=""></li>
+							</ol>
+						</div>
+						<p>用微信或浏览器扫描下载</p>
+						<span></span>
+					</div>
+					<div class="app_b_r">
+						<div>
+							<a id="xlcIos" href="https://itunes.apple.com/cn/app/id1272482310?mt=8"><img src="images/btn_ios.png" alt=""></a>
+							<a id="xlcAz" href="http://122.14.62.46:18180/xlc/szxg_xlc.apk"><img src="images/btn_az.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="con1_r">
+				<img src="images/iphone1.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="con2">
+		<div class="content">
+			<img src="images/cont1.png" alt="">
+		</div>
+	</div>
+	<div class="con3">
+		<div class="content">
+			<div class="con1_r">
+				<img src="images/iphone2.png" alt="">
+			</div>
+			<div class="con1_l">
+				<div class="app_t"><img src="images/text2.png" alt=""></div>
+				<div class="app_b">
+					<div class="app_b_l">
+						<div class="app_b_hua">
+							<ol>
+								<li class="cur"><img class="erwei" src="images/jxs.png" alt=""></li>
+							</ol>
+						</div>
+						<p>用微信或浏览器扫描下载</p>
+						<span></span>
+					</div>
+					<div class="app_b_r">
+						<div>
+							<a id="jxsIos" href="https://itunes.apple.com/cn/app/id1271707067?mt=8"><img src="images/btn_ios.png" alt=""></a>
+							<a id="jxsAz" href="http://122.14.62.46:18180/jxs/szxg_jxs.apk"><img src="images/btn_az.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="con4">
+		<div class="content">
+			<img src="images/cont2.png">
+		</div>
+	</div>
+	<div class="footer">
+		<dl class="content">
+			<dt><span>热线电话：</span>400-1821-200</dt>
+			<dd><span>&nbsp;<img src="images/beian.png" alt=""></span>京公网安备 11010602100279号 | 京ICP备17013723号-2</dd>
+			<dd>Copyright 2017 | Powered by 三真网 版权所有</dd>
+		</dl>
+	</div>
+	<script type="text/javascript">
+	;(function(){//图片缓存添加随机数
+	    var imgDom=document.getElementsByTagName('img');
+	    for (var i = 0; i < imgDom.length; i++) {
+	        var imgSrc=imgDom[i].getAttribute('src');
+	        imgDom[i].setAttribute('src', imgSrc+'?v='+parseInt((Math.random())*100000));
+	    };
+	})()
+	</script>
+	<script type="text/javascript">
+		/*跳转*/
+		if (!GetQueryString('string')) {
+			window.location.href=window.location.origin+''+window.location.pathname+'?string='+parseInt(Math.random()*100000000);
+		};
+		/*手机登录*/
+		var xlcIos=document.getElementById('xlcIos');
+		var xlcAz=document.getElementById('xlcAz');
+		var jxsIos=document.getElementById('jxsIos');
+		var jxsAz=document.getElementById('jxsAz');
+		var u = navigator.userAgent;
+		if (u.indexOf('iPhone') > -1 || u.indexOf('Android') > -1 || u.indexOf('Adr') > -1) {
+			xlcIos.setAttribute("href", "http://3zxgweb.3zqp.com/appdownxlc.html");
+			xlcAz.setAttribute("href", "http://3zxgweb.3zqp.com/appdownxlc.html");
+			jxsIos.setAttribute("href", "http://3zxgweb.3zqp.com/appdownjxs.html");
+			jxsAz.setAttribute("href", "http://3zxgweb.3zqp.com/appdownjxs.html");
+		}
+		// 防止二维码缓存
+		/*var img=document.getElementsByClassName('erwei');
+		for (var i = 0; i < img.length; i++) {
+			img[i].src=img[i].src+'?str='+parseInt(Math.random()*10000);
+		};*/
+		/*获取参数*/
+		function GetQueryString(name)
+		{
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
+	</script>
+</body>
+</html>

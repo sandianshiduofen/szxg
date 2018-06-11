@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>三真修理厂app下载</title>
+</head>
+<body>
+<style>
+	html{font-size: 100px;background:#fff url('images/xlc-bg.jpg') 0 0 no-repeat;-webkit-background-size: cover;background-size: cover;}
+	body{font-family: tahoma,Helvetica, Arial,"\5FAE\8F6F\96C5\9ED1"; *font-family: "\5FAE\8F6F\96C5\9ED1";font-size: 0.14rem;}
+	*{margin: 0;padding: 0;list-style: none;}
+	img{display: block;border:none;}
+	a{text-decoration: none;}
+	.download{height: 0.5rem;line-height: 0.5rem; width: 92%;position: absolute;left: 4%;bottom: 0.35rem;text-align: center;background: #e00000;color: #fff;font-size: 0.18rem;border-radius: 8px;}
+</style>
+
+<a class="download" href="javascript:download();">立即下载</a>
+
+<script type="text/javascript">
+	var u = navigator.userAgent;
+	if (u.indexOf('iPhone') > -1) {
+	window.location.href="https://itunes.apple.com/cn/app/id1272482310?mt=8"; 
+	} else if (u.indexOf('Windows Phone') > -1) {
+	 window.location.href = "www.baidu.com";
+	}
+	function is_weixin() {
+	    var ua = navigator.userAgent.toLowerCase();
+	    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+	var isWeixin = is_weixin();
+	var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+	function loadHtml(){
+		var div = document.createElement('div');
+		div.id = 'weixin-tip';
+		div.onclick=function(){
+			div.parentNode.removeChild(div);
+		}
+		div.innerHTML = '<p><img src="images/wecat-fu.png" style="width:100%" alt="微信打开"/></p>';
+		document.body.appendChild(div);
+	}
+	
+	function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;#weixin-tip p";
+	
+	function download(){
+		var u = navigator.userAgent;
+		if (u.indexOf('iPhone') > -1) {
+			window.location.href="https://itunes.apple.com/cn/app/id1272482310?mt=8"; 
+		} else if (u.indexOf('Windows Phone') > -1) {
+		 	window.location.href = "www.baidu.com";
+		}else{
+			if(isWeixin){
+				loadHtml();
+				loadStyleText(cssText);
+			}else{
+				window.location.href='http://122.14.62.46:18180/xlc/szxg_xlc.apk';
+			}
+		}
+	}
+</script>
+</body>
+</html>
